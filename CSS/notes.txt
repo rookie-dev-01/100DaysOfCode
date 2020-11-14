@@ -1,0 +1,17 @@
+1. In CSS : on defining style classes: the last ordered style class takes higer precedence. 
+
+Note: It doesn't matter which order the classes are listed in the HTML element.
+
+However, the order of the class declarations in the <style> section is what is important. 
+The second declaration will always take precedence over the first. 
+Because .blue-text is declared second, it overrides the attributes of .pink-text
+
+2. #ID style takes precedence over the .class style
+
+3. body-style values gets overridden with the class-style attributes 
+
+4. Inline style elements overrides everything else. 
+
+5. !important; - adding this will make sure that this property sustains no matter what styles are been added on top of this. 
+
+6. TRANSFORM - tag used to transform the elements - scale, move, rotate, skew, etc.

@@ -1,0 +1,31 @@
+package day11;
+
+import java.util.HashSet;
+
+public class LongestSubstringWithoutRepeatingCharacters {
+	
+	public static int lengthOfLongestSubstring(String s) {
+		 
+        int max=0;
+        int i=0,j=0;
+        HashSet<Character> charSet = new HashSet<>();
+        while(j<s.length() && i<s.length()){
+            if(!charSet.contains(s.charAt(j))){
+                charSet.add(s.charAt(j));
+                max = Math.max(max, j-i);
+                j++;
+            }else{
+                charSet.remove(s.charAt(j));
+                i++;
+            }
+        }
+        return max;
+    }
+	    
+	
+	public static void main(String[] args) {
+		
+		System.out.println(lengthOfLongestSubstring("pwwkew"));
+	}
+
+}
